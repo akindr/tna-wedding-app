@@ -11,8 +11,6 @@ import {
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
-import { MonoText } from '../components/StyledText';
-
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -21,11 +19,13 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.droidSafeArea}>
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          
-          <View style={styles.getStartedContainer}>
-            <Text style={styles.getStartedText}>Yo, Bitch</Text>
-            <Text style={styles.tnaText}>T & A getting Hitched!!</Text>
+        <ScrollView
+          style={styles.container}
+          contentContainerStyle={styles.contentContainer}
+        >
+          <View style={styles.welcomeTextContainer}>
+            <Text style={styles.getStartedText}>Tina & Austin</Text>
+            <Text style={styles.tnaText}>Welcome to our Wedding!</Text>
           </View>
 
           <View style={styles.welcomeContainer}>
@@ -34,16 +34,7 @@ export default class HomeScreen extends React.Component {
               style={styles.welcomeImage}
             />
           </View>
-
         </ScrollView>
-
-        <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
-
-          <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-            <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
-          </View>
-        </View>
       </SafeAreaView>
     );
   }
@@ -58,8 +49,8 @@ export default class HomeScreen extends React.Component {
 
       return (
         <Text style={styles.developmentModeText}>
-          Development mode is enabled, your app will be slower but you can use useful development
-          tools. {learnMoreButton}
+          Development mode is enabled, your app will be slower but you can use
+          useful development tools. {learnMoreButton}
         </Text>
       );
     } else {
@@ -72,7 +63,9 @@ export default class HomeScreen extends React.Component {
   }
 
   _handleLearnMorePress = () => {
-    WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
+    WebBrowser.openBrowserAsync(
+      'https://docs.expo.io/versions/latest/guides/development-mode'
+    );
   };
 
   _handleHelpPress = () => {
@@ -84,13 +77,12 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
   droidSafeArea: {
-      flex: 1,
-      backgroundColor: '#fff',
-      paddingTop: Platform.OS === 'android' ? 25 : 0
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
   },
   contentContainer: {
     paddingTop: 30,
@@ -103,7 +95,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     width: '100%',
   },
-  getStartedContainer: {
+  welcomeTextContainer: {
     alignItems: 'center',
     marginTop: 20,
     marginHorizontal: 50,

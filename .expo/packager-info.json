@@ -1,9 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 21616,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
   "expoServerNgrokUrl": "https://ha-86s.anonymous.wedding-app.exp.direct",
   "packagerNgrokUrl": "https://packager.ha-86s.anonymous.wedding-app.exp.direct",
-  "ngrokPid": 21647
+  "ngrokPid": 24748,
+  "webpackServerPort": null
 }
